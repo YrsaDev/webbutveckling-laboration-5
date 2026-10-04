@@ -91,6 +91,7 @@ const student = {
 history.push(student);
     // Spara och uppdatera historiken
 saveHistory();
+renderHistory();
 }
 
 
