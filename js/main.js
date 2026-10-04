@@ -39,14 +39,12 @@ if (fullnameInput.value.trim() === "") {
 }    
 if (emailInput.value.trim() === "") {
     errors.push("E-postadress är obligatoriskt.");
-    return;
 }
 if (phoneInput.value.trim() === "") {
     errors.push("Telefonnummer är obligatoriskt.");
-    return;
 }
     // Visa eventuella felmeddelanden
-
+displayErrors(errors);
     // Returnera resultatet (true eller false) av valideringen
 }
 
