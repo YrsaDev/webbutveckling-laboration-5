@@ -56,8 +56,13 @@ return errors.length === 0;
  */
 function displayErrors(errors) {
     // Rensa tidigare felmeddelanden
-
+errorList.innerHTML = "";
     // Skriv ut aktuella felmeddelanden till DOM
+    errors.forEach(error => {
+        const li = document.createElement("li");
+        li.textContent = error;
+        errorList.appendChild(li);
+    });
 }
 
 
