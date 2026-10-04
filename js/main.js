@@ -33,6 +33,7 @@ let history = [];
  * @returns {boolean}
  */
 function validateForm() {
+    errors = []; // Rensa tidigare felmeddelanden
     // Kontrollera formulärets obligatoriska fält
 if (fullnameInput.value.trim() === "") {
     errors.push("Fullständigt namn är obligatoriskt.");
@@ -46,13 +47,14 @@ if (phoneInput.value.trim() === "") {
     // Visa eventuella felmeddelanden
 displayErrors(errors);
     // Returnera resultatet (true eller false) av valideringen
+return errors.length === 0;
 }
 
 
 /**
  * Visar felmeddelanden på sidan.
  */
-function displayErrors() {
+function displayErrors(errors) {
     // Rensa tidigare felmeddelanden
 
     // Skriv ut aktuella felmeddelanden till DOM
