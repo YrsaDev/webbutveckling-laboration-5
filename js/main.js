@@ -191,3 +191,7 @@ deleteHistoryButton.addEventListener("click", () => {
 
 // När sidan laddas:
 // - läs in och visa eventuell tidigare historik
+document.addEventListener("DOMContentLoaded", () => {
+    loadHistory();
+    renderHistory();
+});
