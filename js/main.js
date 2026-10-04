@@ -180,10 +180,14 @@ form.addEventListener("submit", (event) => {
 });
 
 // När användaren klickar på "Rensa"
-
+clearButton.addEventListener("click", () => {
+    clearForm();
+});
 
 // När användaren klickar på "Radera historik"
-
+deleteHistoryButton.addEventListener("click", () => {
+    deleteHistory();
+});
 
 // När sidan laddas:
 // - läs in och visa eventuell tidigare historik
