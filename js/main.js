@@ -90,6 +90,7 @@ const student = {
 };
 history.push(student);
     // Spara och uppdatera historiken
+saveHistory();
 }
 
 
@@ -98,6 +99,7 @@ history.push(student);
  */
 function saveHistory() {
     // Spara history i localStorage
+localStorage.setItem("history", JSON.stringify(history));
 }
 
 
