@@ -121,8 +121,22 @@ if (savedHistory) {
  */
 function renderHistory() {
     // Rensa tidigare visad historik
-
+historySection.innerHTML = "";
     // Skriv ut innehållet i history till DOM
+history.forEach((student) => {
+    const card = document.createElement("div");
+    card.classList.add("card");  
+    const name = document.createElement("div");
+    name.textContent = student.fullname;
+    const email = document.createElement("div");
+    email.textContent = student.email;
+    const phone = document.createElement("div");
+    phone.textContent = student.phone;
+    card.appendChild(name);
+    card.appendChild(email);
+    card.appendChild(phone);
+    historySection.appendChild(card);
+});
 }
 
 
