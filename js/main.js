@@ -82,7 +82,13 @@ previewEmail.textContent = email;
 previewPhone.textContent = phone;
 studentCard.style.fontFamily = font;
     // Lägg till studentkortet i historiken
-
+const student = {
+    fullname: fullname,
+    email: email,
+    phone: phone,
+    font: font
+};
+history.push(student);
     // Spara och uppdatera historiken
 }
 
