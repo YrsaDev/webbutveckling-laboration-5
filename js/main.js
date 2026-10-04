@@ -108,8 +108,11 @@ localStorage.setItem("history", JSON.stringify(history));
  */
 function loadHistory() {
     // Hämta eventuell sparad historik
-
+const savedHistory = localStorage.getItem("history");
     // Uppdatera history
+if (savedHistory) {
+    history = JSON.parse(savedHistory);
+    }
 }
 
 
