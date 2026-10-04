@@ -151,6 +151,7 @@ function clearForm() {
     previewPhone.textContent = "Telefon";
     studentCard.style.fontFamily = "Georgia";
     // Rensa eventuella felmeddelanden
+    errorList.innerHTML = "";
 }
 
 
